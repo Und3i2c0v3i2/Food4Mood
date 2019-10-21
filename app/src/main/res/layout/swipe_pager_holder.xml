@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/transparent_white_rounded_stroke_background">
+
+
+    <ImageView
+        android:id="@+id/swipe_pager_holder_img"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/swipe_pager_holder_description"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        tools:text="dish desc"
+        android:textSize="16dp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:layout_toRightOf="@id/swipe_pager_holder_img"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/swipe_pager_holder_img"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/swipe_pager_holder_txt_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3F3C3C" />
+
+        <RatingBar
+            android:id="@+id/swipe_pager_holder_rating_bar_indicator"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:numStars="5"
+            android:secondaryProgressTint="#00000000"
+            android:stepSize="0.1"
+            android:theme="@style/RatingBar" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

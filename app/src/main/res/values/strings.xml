@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Food 4 Mood</string>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+
+    <string name="shared_preferences_spinner_choice">SPINNER_CHOICE</string>
+    <string name="shared_preferences_search_filter">SEARCH_FILTER</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="menu_share_icon">share</string>
+    <string name="menu_search_icon">search</string>
+
+    <string name="ingredients">Ingredients:</string>
+    <string name="preparation">Preparation:</string>
+
+    <string name="calories">calories: %1$d</string>
+    <string name="category">category: %1$s</string>
+    <string name="img_content_desc">recipe image</string>
+    <string name="description">Description:</string>
+
+</resources>

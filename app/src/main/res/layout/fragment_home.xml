@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/home_fragment_image_view_search"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/appetizers"
+            tools:layout_editor_absoluteY="130dp" />
+
+        <SearchView
+            android:id="@+id/home_fragment_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/transparent_white_search_view_background"
+            android:clickable="true">
+
+        </SearchView>
+
+        <TextView
+            android:id="@+id/home_fragment_txt_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_fragment_image_view_search"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/transparent_white_rounded_stroke_background"
+            android:padding="8dp"
+            android:text="The first edition of On Food and Cooking appeared in 1984. I wrote it to translate technical food science into cook-friendly kitchen science, something that had not yet been done in a systematic, comprehensive way. "
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/home_fragment_txt_recently_added_recipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_fragment_txt_info"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Recently added"
+            android:textSize="24dp"
+            android:textStyle="italic" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_fragment_swipe_img_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_fragment_txt_recently_added_recipes"
+            android:layout_marginTop="8dp">
+
+            <ImageButton
+                android:id="@+id/home_fragment_left_nav"
+                android:layout_width="24dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="4dp"
+                android:background="#fff"
+                android:src="@drawable/ic_nav_prev_grey_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/home_fragment_view_pager"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                app:layout_constraintEnd_toStartOf="@+id/home_fragment_right_nav"
+                app:layout_constraintStart_toEndOf="@+id/home_fragment_left_nav"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <ImageButton
+                android:id="@+id/home_fragment_right_nav"
+                android:layout_width="24dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="4dp"
+                android:background="#fff"
+                android:src="@drawable/ic_nav_next_grey_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

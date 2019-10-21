@@ -1,0 +1,91 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "b221d725d18585cc9849764459b67088",
+    "entities": [
+      {
+        "tableName": "dish",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`dish_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `dish_name` TEXT, `dish_description` TEXT, `dish_category` TEXT, `ingredients` TEXT, `dish_calories` INTEGER NOT NULL, `dish_price` REAL NOT NULL, `dish_img` TEXT, `dish_rating` REAL NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "dish_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "dish_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "dish_description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "dish_category",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ingredients",
+            "columnName": "ingredients",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "kcal",
+            "columnName": "dish_calories",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "dish_price",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imgFile",
+            "columnName": "dish_img",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "dish_rating",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "dish_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_dish_dish_name",
+            "unique": true,
+            "columnNames": [
+              "dish_name"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_dish_dish_name` ON `${TABLE_NAME}` (`dish_name`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b221d725d18585cc9849764459b67088')"
+    ]
+  }
+}
